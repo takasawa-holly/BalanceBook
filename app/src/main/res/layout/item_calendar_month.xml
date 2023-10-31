@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/week_label_layout"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/light_background1"
+        android:paddingBottom="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_calendar_app_bar">
+
+        <TextView
+            android:id="@+id/week_label_sun"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_sun"
+            android:textColor="@color/light_highlight_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_mon"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/week_label_mon"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_mon"
+            android:textColor="@color/light_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_tue"
+            app:layout_constraintStart_toEndOf="@+id/week_label_sun" />
+
+        <TextView
+            android:id="@+id/week_label_tue"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_tue"
+            android:textColor="@color/light_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_web"
+            app:layout_constraintStart_toEndOf="@+id/week_label_mon" />
+
+        <TextView
+            android:id="@+id/week_label_web"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_web"
+            android:textColor="@color/light_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_thu"
+            app:layout_constraintStart_toEndOf="@+id/week_label_tue" />
+
+        <TextView
+            android:id="@+id/week_label_thu"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_thu"
+            android:textColor="@color/light_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_fri"
+            app:layout_constraintStart_toEndOf="@+id/week_label_web" />
+
+        <TextView
+            android:id="@+id/week_label_fri"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_fri"
+            android:textColor="@color/light_label1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/week_label_sat"
+            app:layout_constraintStart_toEndOf="@+id/week_label_thu" />
+
+        <TextView
+            android:id="@+id/week_label_sat"
+            style="@style/label_small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="bottom|center"
+            android:text="@string/calendar_week_label_sat"
+            android:textColor="@color/light_highlight_label2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/week_label_fri" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/month_week_1"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/month_week_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/week_label_layout" />
+
+    <include
+        android:id="@+id/month_week_2"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/month_week_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_week_1" />
+
+    <include
+        android:id="@+id/month_week_3"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/month_week_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_week_2" />
+
+    <include
+        android:id="@+id/month_week_4"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/month_week_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_week_3" />
+
+    <include
+        android:id="@+id/month_week_5"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/month_week_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_week_4" />
+
+    <include
+        android:id="@+id/month_week_6"
+        layout="@layout/item_calendar_week"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month_week_5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

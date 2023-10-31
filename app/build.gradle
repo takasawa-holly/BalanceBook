@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'jp.kt.balancebook'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "jp.kt.balancebook"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+
+    // UI
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Database - room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    androidTestImplementation "androidx.room:room-testing:$room_version"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

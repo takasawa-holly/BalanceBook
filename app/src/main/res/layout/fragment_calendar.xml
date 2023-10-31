@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background2"
+    tools:context=".ui.CalendarFragment">
+
+    <include
+        android:id="@+id/include_calendar_app_bar"
+        layout="@layout/item_calendar_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/calendar_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/include_bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_calendar_app_bar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calendar_fab"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/light_primary2"
+        android:clickable="true"
+        android:contentDescription="@string/calendar_fab_button_text"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="16dp"
+        app:elevation="2dp"
+        app:icon="@drawable/light_ic_add_40"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/light_label1"
+        app:layout_constraintBottom_toTopOf="@+id/include_bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/include_bottom_nav_view"
+        layout="@layout/item_bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

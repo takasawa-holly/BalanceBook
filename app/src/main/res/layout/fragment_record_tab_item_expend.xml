@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background2"
+    tools:context=".ui.tabitem.RecordTabItemExpendFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/record_expend_input_card"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_background1">
+
+            <TextView
+                android:id="@+id/record_expend_date_label_text"
+                style="@style/label_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/record_date_label_text_string"
+                android:textColor="@color/light_label2"
+                app:layout_constraintBottom_toTopOf="@+id/record_expend_amount_label_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/record_expend_amount_label_text"
+                style="@style/label_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/record_amount_label_text_string"
+                android:textColor="@color/light_label2"
+                app:layout_constraintBottom_toTopOf="@+id/record_expend_class_label_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/record_expend_date_label_text" />
+
+            <TextView
+                android:id="@+id/record_expend_class_label_text"
+                style="@style/label_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/record_class_label_text_string"
+                android:textColor="@color/light_label2"
+                app:layout_constraintBottom_toTopOf="@+id/record_expend_memo_label_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/record_expend_amount_label_text" />
+
+            <TextView
+                android:id="@+id/record_expend_memo_label_text"
+                style="@style/label_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/record_memo_label_text_string"
+                android:textColor="@color/light_label2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/record_expend_class_label_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_list_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_datetime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_amount_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/record_expend_edit_date"
+                        style="@style/body_small"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:autofillHints="date"
+                        android:backgroundTint="@color/light_label3"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/record_edit_date_hint"
+                        android:inputType="date"
+                        android:textColorHint="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/record_expend_edit_time"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/record_expend_edit_time"
+                        style="@style/body_small"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:autofillHints="time"
+                        android:backgroundTint="@color/light_label3"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/record_edit_time_hint"
+                        android:inputType="time"
+                        android:textColorHint="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/record_expend_edit_date"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_amount_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_class_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_datetime_layout">
+
+                    <EditText
+                        android:id="@+id/record_expend_edit_amount_text"
+                        style="@style/body_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:autofillHints="amount"
+                        android:backgroundTint="@color/light_label3"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/record_edit_amount_text_hint"
+                        android:inputType="number"
+                        android:textColorHint="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_class_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/edit_memo_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_amount_layout">
+
+                    <EditText
+                        android:id="@+id/record_expend_edit_class_text"
+                        style="@style/body_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:autofillHints="classification"
+                        android:backgroundTint="@color/light_label3"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/record_edit_class_text_hint"
+                        android:inputType="textPersonName"
+                        android:text="@null"
+                        android:textColor="@color/light_label1"
+                        android:textColorHint="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_memo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_class_layout">
+
+                    <EditText
+                        android:id="@+id/record_expend_edit_memo_text"
+                        style="@style/body_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:autofillHints="memo"
+                        android:backgroundTint="@color/light_label3"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="@string/record_edit_memo_text_hint"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/light_label1"
+                        android:textColorHint="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/record_expend_cancel_button"
+        style="@style/label_small"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/light_background1"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/record_cancel_button_string"
+        android:textColor="@color/light_label2"
+        app:layout_constraintEnd_toStartOf="@+id/record_expend_save_button"
+        app:layout_constraintTop_toBottomOf="@+id/record_expend_input_card" />
+
+    <Button
+        android:id="@+id/record_expend_save_button"
+        style="@style/label_small"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/light_primary2"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/record_save_button_string"
+        android:textColor="@color/light_label2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record_expend_input_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

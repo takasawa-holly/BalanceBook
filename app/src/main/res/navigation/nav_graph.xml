@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="jp.kt.balancebook.ui.CalendarFragment"
+        android:label="Calendar Fragment"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendar_to_daily"
+            app:destination="@id/dailyFragment" />
+        <action
+            android:id="@+id/action_calendar_to_record"
+            app:destination="@id/recordFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_calendar_to_stats"
+            app:destination="@id/statsFragment" />
+        <action
+            android:id="@+id/action_calendar_to_setting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyFragment"
+        android:name="jp.kt.balancebook.ui.DailyFragment"
+        android:label="fragment_daily"
+        tools:layout="@layout/fragment_daily" >
+        <action
+            android:id="@+id/action_daily_to_record"
+            app:destination="@id/recordFragment" />
+        <action
+            android:id="@+id/action_daily_to_stats"
+            app:destination="@id/statsFragment" />
+        <action
+            android:id="@+id/action_daily_to_setting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="jp.kt.balancebook.ui.RecordFragment"
+        android:label="fragment_record"
+        tools:layout="@layout/fragment_record" />
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="jp.kt.balancebook.ui.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_stats_to_calendar"
+            app:destination="@id/calendarFragment"
+            app:popUpTo="@id/calendarFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_stats_to_setting"
+            app:destination="@id/settingFragment"
+            app:popUpTo="@id/calendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="jp.kt.balancebook.ui.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting_to_calendar"
+            app:destination="@id/calendarFragment"
+            app:popUpTo="@id/calendarFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_setting_to_stats"
+            app:destination="@id/statsFragment"
+            app:popUpTo="@id/calendarFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Calendar App 01</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calendar_prev_button_text">prev month</string>
+    <string name="calendar_next_button_text">next month</string>
+    <string name="calendar_week_label_sun">Sun</string>
+    <string name="calendar_fab_button_text">new balance add</string>
+    <string name="calendar_week_label_mon">Mon</string>
+    <string name="calendar_week_label_tue">Tue</string>
+    <string name="calendar_week_label_web">Web</string>
+    <string name="calendar_week_label_thu">Thu</string>
+    <string name="calendar_week_label_fri">Fri</string>
+    <string name="calendar_week_label_sat">Sat</string>
+    <string name="bottom_navigation_view_home">Navigation Bottom View Home</string>
+    <string name="bottom_navigation_view_stats">Bottom Navigation View Stats</string>
+    <string name="bottom_navigation_view_setting">Bottom Navigation View Setting</string>
+    <string name="bottom_nav_view_home_text">ホーム</string>
+    <string name="bottom_nav_view_stats_text">統計</string>
+    <string name="bottom_nav_view_setting_text">設定</string>
+
+</resources>
